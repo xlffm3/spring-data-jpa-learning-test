@@ -31,7 +31,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("select p from Post p join fetch p.comments")
     List<Post> findAllPagingWithFetchJoin(Pageable pageable);
 
-    @BatchSize(size = 1000)
     @Query("select p from Post p join fetch p.comments")
     List<Post> findAllWithBatchSize();
 
