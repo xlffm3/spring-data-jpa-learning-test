@@ -1,7 +1,5 @@
-package com.learning.jpa.domain;
+package com.learning.jpa.domain.post;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -11,42 +9,30 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Comment {
+public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String content;
+    private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     private Post post;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "like_id")
-    private Like like;
-
-    protected Comment() {
+    protected Tag() {
     }
 
-    public Comment(String content) {
-        this.content = content;
+    public Tag(String name) {
+        this.name = name;
     }
 
     public void toPost(Post post) {
         this.post = post;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public Post getPost() {
-        return post;
-    }
-
-    public Like getLike() {
-        return like;
+    public String getName() {
+        return name;
     }
 }

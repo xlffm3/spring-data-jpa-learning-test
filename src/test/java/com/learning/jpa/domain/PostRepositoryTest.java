@@ -2,6 +2,10 @@ package com.learning.jpa.domain;
 
 import static org.assertj.core.api.Assertions.*;
 
+import com.learning.jpa.domain.post.Comment;
+import com.learning.jpa.domain.post.Post;
+import com.learning.jpa.domain.post.PostRepository;
+import com.learning.jpa.domain.post.Tag;
 import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityManager;
@@ -10,7 +14,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.data.domain.PageRequest;

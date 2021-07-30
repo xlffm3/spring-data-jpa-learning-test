@@ -1,8 +1,7 @@
-package com.learning.jpa.domain;
+package com.learning.jpa.domain.post;
 
 import java.util.List;
 import java.util.Optional;
-import org.hibernate.annotations.BatchSize;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;

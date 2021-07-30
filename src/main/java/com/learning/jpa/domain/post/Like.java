@@ -1,4 +1,4 @@
-package com.learning.jpa.domain;
+package com.learning.jpa.domain.post;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
